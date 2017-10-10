@@ -1,0 +1,8 @@
+.dctv-botao-menu .text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dctv-botao-menu {
+    min-width: 10%;
+}

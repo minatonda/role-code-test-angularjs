@@ -1,0 +1,29 @@
+.navbar-image {
+    width: 185px;
+    background-position: 0px 4px;
+    background-size: 160px;
+    background-repeat: no-repeat;
+}
+
+.navbar-color {
+    background-color: rgba(45, 66, 73, 0.78);
+}
+
+.navbar-icons {
+    margin-left: -15px;
+    margin-right: -15px;
+    text-align: right;
+    background-color: white;
+}
+
+.navbar-default {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #eee;
+}

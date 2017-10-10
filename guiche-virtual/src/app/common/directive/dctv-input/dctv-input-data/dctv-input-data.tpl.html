@@ -1,0 +1,14 @@
+<div class="dctv-input-data">
+    <div class="col-xs-12 input-group">
+        <input type="text" class="form-control fonte-cor-padrao" uib-datepicker-popup ng-model="dataModel" is-open="eExibirPopupData" close-on-date-selection="true" show-button-bar="false" ; datepicker-options="dateOptions" ng-required="true" close-text="Fechar"/>
+        <span class="input-group-addon">
+            <i class="fa fa-calendar-o fonte-cor-padrao" ng-click="alternarExibicaoPopupData()"></i>
+        </span>
+        <span class="input-group-addon" style="padding: 0px 0px;">
+            <div class="divider"></div>
+        </span>
+        <span class="input-group-addon time-picker">
+            <div uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" show-spinners="false" minute-step="mstep" show-meridian="ismeridian"></div>
+        </span>
+    </div>
+</div>

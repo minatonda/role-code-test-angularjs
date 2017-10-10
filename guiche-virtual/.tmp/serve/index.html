@@ -1,0 +1,122 @@
+<!doctype html>
+<html ng-app="front-end">
+<head>
+    <meta charset="utf-8">
+    <title>SyManager - Conta Azul</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#428bca">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <section-css>
+        <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="../bower_components/angular-toastr/dist/angular-toastr.css" />
+        <link rel="stylesheet" href="../bower_components/animate.css/animate.css" />
+        <link rel="stylesheet" href="../bower_components/ui-select/dist/select.css" />
+        <link rel="stylesheet" href="../bower_components/components-font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="../bower_components/angular-responsive-tables/release/angular-responsive-tables.css" />
+        <link rel="stylesheet" href="../bower_components/angular-bootstrap-colorpicker/css/colorpicker.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css({.tmp/serve,src}) styles/app.css -->
+        <!-- inject:css -->
+        <link rel="stylesheet" href="app/background.css">
+        <link rel="stylesheet" href="app/index.css">
+        <link rel="stylesheet" href="assets/styles/modifications-bootstrap.css">
+        <link rel="stylesheet" href="assets/styles/modifications-ui-bootstrap.css">
+        <link rel="stylesheet" href="assets/styles/modifications-ui-checkbox.css">
+        <link rel="stylesheet" href="assets/styles/modifications-ui-select.css">
+        <link rel="stylesheet" href="app/view/main/main.css">
+        <link rel="stylesheet" href="app/common/directive/dctv-botao-menu/dctv-botao-menu.css">
+        <link rel="stylesheet" href="app/common/directive/dctv-filtro/dctv-filtro.css">
+        <link rel="stylesheet" href="app/common/directive/dctv-ordenador/dctv-ordenador.css">
+        <link rel="stylesheet" href="app/common/directive/dctv-paginacao/dctv-paginacao.css">
+        <link rel="stylesheet" href="app/common/directive/dctv-tabela/dctv-tabela.css">
+        <link rel="stylesheet" href="app/components/layout/icones-rapidos/icones-rapidos.css">
+        <link rel="stylesheet" href="app/components/layout/navbar/navbar.css">
+        <link rel="stylesheet" href="app/common/directive/dctv-input/dctv-input-data/dctv-input-data.css">
+        <!-- endinject -->
+        <!-- endbuild -->
+    </section-css>
+    <section-partials>
+        <!-- inject:partials -->
+        <!-- angular templates will be automatically converted in js and inserted here -->
+        <!-- endinject -->
+        <!-- endbuild -->
+    </section-partials>
+</head>
+<body class="">
+<nav class="header navbar navbar-default navbar-fixed-top" ui-view="navbar"></nav>
+<div class="container-fluid">
+    <div ui-view class="conteudo"></div>
+</div>
+</body>
+<section-script>
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../bower_components/angular-touch/angular-touch.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../bower_components/angular-messages/angular-messages.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../bower_components/malarkey/dist/malarkey.min.js"></script>
+    <script src="../bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
+    <script src="../bower_components/ui-select/dist/select.js"></script>
+    <script src="../bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="../bower_components/angular-responsive-tables/release/angular-responsive-tables.js"></script>
+    <script src="../bower_components/angular-bootstrap-contextmenu/contextMenu.js"></script>
+    <script src="../bower_components/ng-lodash/build/ng-lodash.js"></script>
+    <script src="../bower_components/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js"></script>
+    <script src="../bower_components/rainbowvis.js/rainbowvis.js"></script>
+    <script src="../bower_components/angular-input-masks/angular-input-masks-standalone.js"></script>
+    <script src="../bower_components/angular-bootstrap-checkbox/angular-bootstrap-checkbox.js"></script>
+    <script src="../bower_components/ngMask/dist/ngMask.js"></script>
+    <script src="../bower_components/angular-base64/angular-base64.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <script src="app/common/directive/dctv-input/dctv-input-data/dctv-input-data.directive.js"></script>
+    <script src="app/components/layout/navbar/navbar.controller.js"></script>
+    <script src="app/components/layout/icones-rapidos/icones-rapidos.controller.js"></script>
+    <script src="app/common/directive/dctv-tabela/dctv-tabela.factory.js"></script>
+    <script src="app/common/directive/dctv-tabela/dctv-tabela.directive.js"></script>
+    <script src="app/common/directive/dctv-paginacao/dctv-paginacao.directive.js"></script>
+    <script src="app/common/directive/dctv-ordenador/dctv-ordenador.directive.js"></script>
+    <script src="app/common/directive/dctv-filtro/dctv-filtro.directive.js"></script>
+    <script src="app/common/directive/dctv-botao-menu/dctv-botao-menu.directive.js"></script>
+    <script src="app/view/main/main.module.js"></script>
+    <script src="app/view/main/main.route.js"></script>
+    <script src="app/view/main/main.controller.js"></script>
+    <script src="app/index.module.js"></script>
+    <script src="app/index.run.js"></script>
+    <script src="app/index.route.js"></script>
+    <script src="app/index.constants.js"></script>
+    <script src="app/index.config.js"></script>
+    <script src="app/common/directive/dctv-input/dctv-input.module.js"></script>
+    <script src="app/components/layout/layouts.module.js"></script>
+    <script src="app/common/service/common-service.module.js"></script>
+    <script src="app/common/factory/common-factory.module.js"></script>
+    <script src="app/common/directive/common-directive.module.js"></script>
+    <script src="app/view/view.module.js"></script>
+    <script src="app/components/components.module.js"></script>
+    <script src="app/common/common.module.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+</section-script>
+</html>

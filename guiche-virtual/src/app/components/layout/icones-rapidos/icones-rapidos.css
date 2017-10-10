@@ -1,0 +1,9 @@
+.icones-rapidos {
+    margin-top: -20px;
+    padding: 2px 2px;
+    text-align: right;
+}
+
+.icones-rapidos .btn {
+    margin: 1px;
+}

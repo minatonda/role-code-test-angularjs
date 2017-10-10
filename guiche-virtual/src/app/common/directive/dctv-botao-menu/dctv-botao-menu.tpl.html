@@ -1,0 +1,17 @@
+<div class="dctv-botao-menu" ng-show="possuiEntradasParaExibir()" uib-dropdown is-open="menuAberto">
+    <button type="button" class="btn btn-full-width {{obterClasse()}}" ng-if="possuiEntradasParaExibir() && !possuiUnicaEntradaParaExibir()" uib-dropdown-toggle>
+        <i class="fa {{obterClasseIcone()}}"></i>
+    </button>
+    <button type="button" class="btn btn-full-width {{obterClasse()}}" ng-if="possuiEntradasParaExibir() && possuiUnicaEntradaParaExibir()" ng-click="dispararEntradaFuncao(obterEntradasExibicao()[0])">
+        <i class="fa {{obterEntradaIcone(obterEntradasExibicao()[0])}}"></></i>
+    </button>
+    <ul class="dropdown-menu" ng-if="possuiEntradasParaExibir()" ng-class="{'dropdown-canto-direito':eListaCantoDireito()}" uib-dropdown-menu>
+        <li ng-repeat="entrada in obterEntradasExibicao()">
+            <a class="text-left text-ellipsis" ng-click="dispararEntradaFuncao(entrada)">
+                <i style="margin-right: 4px;"
+                   class="fa {{obterEntradaIcone(entrada)}}"></i>
+                <span>{{obterEntradaTitulo(entrada)}}</span>
+            </a>
+        </li>
+    </ul>
+</div>

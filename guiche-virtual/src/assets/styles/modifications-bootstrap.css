@@ -1,0 +1,190 @@
+@media (max-width: 768px) {
+    .row-eq-height:not(.no-xs) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .row-eq-height:not(.no-sm) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .hidden-sm {
+        display: none !important;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hidden-md {
+        display: none !important;
+    }
+
+    .row-eq-height:not(.no-md) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hidden-lg {
+        display: none !important;
+    }
+
+}
+
+/*novas classes*/
+
+/*Botões*/
+.btn.btn-full-width {
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.btn.btn-now-wrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-customizado-1 {
+    color: #ffffff;
+    background-color: #2D4249;
+    border-color: #2D4249;
+}
+
+.btn-customizado-1:hover,
+.btn-customizado-1:focus,
+.btn-customizado-1:active,
+.btn-customizado-1.active,
+.open .dropdown-toggle.btn-customizado-1 {
+    color: #ffffff;
+    background-color: #243338;
+    border-color: #2D4249;
+}
+
+.btn-customizado-1:active,
+.btn-customizado-1.active,
+.open .dropdown-toggle.btn-customizado-1 {
+    background-image: none;
+}
+
+.btn-customizado-1.disabled,
+.btn-customizado-1[disabled],
+fieldset[disabled] .btn-customizado-1,
+.btn-customizado-1.disabled:hover,
+.btn-customizado-1[disabled]:hover,
+fieldset[disabled] .btn-customizado-1:hover,
+.btn-customizado-1.disabled:focus,
+.btn-customizado-1[disabled]:focus,
+fieldset[disabled] .btn-customizado-1:focus,
+.btn-customizado-1.disabled:active,
+.btn-customizado-1[disabled]:active,
+fieldset[disabled] .btn-customizado-1:active,
+.btn-customizado-1.disabled.active,
+.btn-customizado-1[disabled].active,
+fieldset[disabled] .btn-customizado-1.active {
+    background-color: #2D4249;
+    border-color: #2D4249;
+}
+
+.btn-customizado-1 .badge {
+    color: #2D4249;
+    background-color: #ffffff;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 39px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.728571;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.btn-form-control {
+    padding: 8.5px 12px;
+}
+
+.input-group .form-control {
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-left: none;
+}
+
+.input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #666;
+    text-align: center;
+    background-color: #ffffff;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #f1f4f9;
+    opacity: 1;
+    color: #3e5f7e;
+}
+
+.text-muted {
+    color: #999;
+}
+
+.pagination {
+    display: block;
+    margin: 0;
+    position: relative;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.pagination li > a {
+    height: 39px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.728571;
+}
+
+.tooltip {
+
+}
+
+.tooltip .tooltip-arrow {
+    border-top-color: #c9d3dd !important;
+}
+
+.tooltip .tooltip-inner {
+    border: 1px solid #c9d3dd;
+    border-radius: 0px;
+    background-color: #f1f4f9;
+    max-width: none;
+    padding: 2px 2px;
+}
+
+.container-fluid.container-fluid-image {background-repeat: no-repeat;background-size: cover;margin-left: -15px;margin-right: -15px;}

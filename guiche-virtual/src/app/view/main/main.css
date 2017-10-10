@@ -1,0 +1,39 @@
+.guiche-formulario {
+    background-color: #f5ab35;
+    border-radius: 4px;
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+.guiche-formulario .guiche-formulario-cabecalho {
+    background-color: #2d4249;
+    color: white;
+    margin-top: 0px;
+    text-align: left;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.guiche-formulario .form-control {
+    font-weight: 600;
+    color: #666666;
+    font-size: 16px;
+}
+
+.guiche-formulario .control-label {
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.guiche-formulario .guiche-formulario-cabecalho h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 10px 0px;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+.guiche-formulario .guiche-formulario-corpo {
+    padding: 10px 20px;
+}
