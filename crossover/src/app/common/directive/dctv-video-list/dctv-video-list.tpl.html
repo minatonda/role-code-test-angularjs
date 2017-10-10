@@ -1,0 +1,49 @@
+<div class="row video-list">
+  <div class="col-xs-12 col-sm-6 video" ng-class="{'col-md-6':video.largeSize,'col-md-3':!video.largeSize}"
+       ng-repeat="video in videos">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="video-player">
+          <div class="video-title" ng-click="setVideoLargeSize(video)">
+            <span>{{video.name}}</span>
+          </div>
+          <div class="video-container">
+            <video video-id="{{video._id}}" preload="none">
+              <source ng-if="video.firstPlay" ng-attr-src="{{video.firstPlay&&getVideoUrl(video)}}"
+                      ng-attr-type="{{video.firstPlay&&getVideoType(video)}}">
+            </video>
+          </div>
+          <div class="video-control">
+            <span class="video-control-ratings">
+              <i class="fa {{getVideoRatingStar(video,1)}}" ng-click="rateVideo(video,1)"></i>
+              <i class="fa {{getVideoRatingStar(video,2)}}" ng-click="rateVideo(video,2)"></i>
+              <i class="fa {{getVideoRatingStar(video,3)}}" ng-click="rateVideo(video,3)"></i>
+              <i class="fa {{getVideoRatingStar(video,4)}}" ng-click="rateVideo(video,4)"></i>
+              <i class="fa {{getVideoRatingStar(video,5)}}" ng-click="rateVideo(video,5)"></i>
+            </span>
+            <div class="video-control-progress">
+              <input class="video-progress" video-id="{{video._id}}" type="range" min="0" max="{{video.duration}}"
+                     step="0.01"
+                     ng-model="video.currentTime"
+                     ng-change="setVideoCurrentTime(video)">
+            </div>
+            <div class="video-control-buttons">
+              <i class="fa" ng-click="playPauseVideo(video)"
+                 ng-class="{'fa-play':video.paused,'fa-pause':!video.paused}"></i>
+              <input class="volume" type="range" min="0" max="1" step="0.01" ng-model="video.volume"
+                     ng-change="setVolumeVideo(video)">
+              <i class="fa fa-volume-up"></i>
+              <i class="fa fa-expand" ng-click="setFullScreenVideo(video)"></i>
+            </div>
+          </div>
+        </div>
+        <div class="video-description">
+          <span>
+
+            {{video.description}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

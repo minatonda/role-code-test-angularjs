@@ -1,0 +1,233 @@
+.video-list {
+
+}
+
+.video-list video {
+  max-width: 100%;
+  width: 100%;
+  height: 30vh;
+  background: black;
+  margin-bottom: -5px;
+}
+
+.video {
+  margin-bottom: 10px;
+}
+
+.video, video {
+  transition: all 0.3s;
+}
+
+.video-list .video.col-md-6 video {
+  height: calc(60vh + 69px);
+}
+
+.video-container {
+  border: 1px solid #cccccc;
+  border-bottom: none;
+}
+
+.video-title {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+  padding: 0px 10px;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  border: 1px solid #cccccc;
+  color: #428bca;
+  font-weight: 600;
+  border-bottom: none;
+}
+
+.video-control {
+  border: 1px solid #cccccc;
+}
+
+.video-control > * {
+  width: 100%;
+  padding: 5px 2%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.video-control .video-control-progress {
+  padding: 0;
+  margin-top: -1px;
+}
+
+.video-control .video-control-ratings {
+  bottom: 33px;
+  color: orange;
+  opacity: 0;
+  transition: all 0.5s;
+  font-size: 160%;
+  position: absolute;
+}
+
+.video-control:hover .video-control-ratings {
+  opacity: 1;
+}
+
+.video-control .video-control-buttons {
+
+}
+
+.video-control input[type="range"].volume {
+  display: inline-block;
+  width: 20%;
+  margin-left: auto;
+}
+
+.video-control i.fa {
+  margin-top: -1px;
+  margin-left: 1%;
+  margin-right: 5%;
+}
+
+.video-control i.fa-expand {
+  margin-left: 7%;
+}
+
+.video-list .video .video-description {
+  height: 10vh;
+  overflow: hidden;
+  overflow-y: auto;
+  border: 1px solid #cccccc;
+  border-top: none;
+  padding: 2px 6px;
+}
+
+.video-list .video.col-md-6 .video-description {
+  height: 20vh;
+}
+
+.video-player:-webkit-full-screen video {
+  height: calc(100vh - 62px) !important;
+  width: 100vw !important;
+}
+
+.video-player:-moz-full-screen video {
+  height: calc(100vh - 62px);
+  width: 100vw !important;
+}
+
+.video-player:-ms-fullscreen video {
+  height: calc(100vh - 62px);
+  width: 100vw !important;
+}
+
+.video-container .video-progress {
+}
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #3071a9;
+  border-radius: 1.3px;
+}
+
+input[type=range] {
+  height: 10px;
+  margin-top: -1px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #3071a9;
+  border-radius: 1.3px;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #3071a9;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #dddddd;
+  height: 100%;
+  width: 16px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: 0px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #dddddd;
+  height: 100%;
+  width: 16px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: 0px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  -webkit-appearance: none;
+  height: 8px;
+  margin-top: -1px;
+  width: 16px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+.video-player {
+  position: relative;
+}
+
+.rattings {
+  position: absolute;
+  bottom: 35px;
+  left: 8px;
+  color: yellow;
+}

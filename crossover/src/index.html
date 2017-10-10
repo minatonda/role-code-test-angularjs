@@ -1,0 +1,75 @@
+<!doctype html>
+<html ng-app="front-end">
+<head>
+    <meta charset="utf-8">
+    <title>Crossover - Video Portal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#428bca">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <section-css>
+        <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css({.tmp/serve,src}) styles/app.css -->
+        <!-- inject:css -->
+        <!-- css files will be automatically insert here -->
+        <!-- endinject -->
+        <!-- endbuild -->
+    </section-css>
+    <section-partials>
+        <!-- inject:partials -->
+        <!-- angular templates will be automatically converted in js and inserted here -->
+        <!-- endinject -->
+        <!-- endbuild -->
+    </section-partials>
+</head>
+<body class="background-vidrio-andino-symbol-hd">
+<div class="container-fluid" style="height: 100%;background-color: rgba(255, 255, 255, 0.53);">
+    <div id="layout-head" ui-view="layoutHeader"></div>
+    <div id="layout-content" style="height:{{middleHeight()}}px;" class="row row-eq-height">
+        <div id="layout-left" ui-view="layoutLeft" class="">
+
+        </div>
+        <div id="layout-middle" class="">
+            <div ui-view class="conteudo"></div>
+            <div class="loading-screen">
+                <div class="sk-cube-grid">
+                    <div class="sk-cube sk-cube1"></div>
+                    <div class="sk-cube sk-cube2"></div>
+                    <div class="sk-cube sk-cube3"></div>
+                    <div class="sk-cube sk-cube4"></div>
+                </div>
+            </div>
+        </div>
+        <div id="layout-right" ui-view="layoutRight" class="">
+
+        </div>
+    </div>
+    <div class="row row-eq-height">
+
+    </div>
+</div>
+</body>
+<section-script>
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- run `gulp inject` to automatically populate bower script dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <!-- js files will be automatically insert here -->
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+</section-script>
+</html>

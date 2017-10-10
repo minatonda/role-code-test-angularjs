@@ -1,0 +1,137 @@
+@media (min-width: 768px) and (max-width: 991px) {
+    .hidden-sm {
+        display: none !important;
+    }
+
+    ul.dropdown-menu:not(.ui-select-choices) {
+        display: block;
+        position: absolute;
+        left: 3% !important;
+        right: 3% !important;
+        z-index: 10000;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hidden-md {
+        display: none !important;
+    }
+
+    .row-eq-height {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hidden-lg {
+        display: none !important;
+    }
+
+    .row-eq-height {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    ul.dropdown-menu:not(.ui-select-choices) {
+        display: block;
+        position: fixed;
+        left: 1% !important;
+        right: 1% !important;
+        z-index: 10000;
+    }
+}
+
+/*novas classes*/
+
+/*Botões*/
+.btn.btn-full-width {
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.btn.btn-now-wrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-cebrace-mixed {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    transition: all 0.2s;
+}
+
+.btn-cebrace-mixed.active, .btn-cebrace-mixed:active, .btn-cebrace-mixed:hover, .open > .dropdown-toggle.btn-cebrace-mixed {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-cebrace-mixed.active, .btn-cebrace-mixed:active, .btn-cebrace-mixed:hover, .open > .dropdown-toggle.btn-cebrace-mixed {
+    color: #fff;
+    background-color: rgb(66, 139, 202);;
+    border-color: rgb(66, 139, 202);;
+}
+
+.btn-cross-cebrace.active.focus, .btn-cebrace-mixed.active:focus, .btn-cebrace-mixed.active:hover, .btn-cebrace-mixed:active.focus, .btn-cebrace-mixed:active:focus, .btn-cebrace-mixed:active:hover, .open > .dropdown-toggle.btn-cebrace-mixed.focus, .open > .dropdown-toggle.btn-cebrace-mixed:focus, .open > .dropdown-toggle.btn-cebrace-mixed:hover {
+    color: #fff;
+    background-color: rgb(66, 139, 202);;
+    border-color: rgb(66, 139, 202);;
+}
+
+.modal-dialog {
+    width: 95%;
+    margin: 10px auto;
+}
+
+a {
+    color: rgb(66, 139, 202);;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(66, 139, 202);;
+}
+
+.input-group .form-control {
+    z-index: initial;
+}
+
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+    z-index: 0;
+    margin-left: -1px;
+}
+
+.modal {
+  padding: 10px 10px !important;
+}
+
+.modal-dialog {
+  margin: 0px auto !important;
+  width: 100%;
+}
+
+.modal-header {
+  max-height: 10vh;
+}
+
+.modal-body {
+  max-height: calc(80vh - 20px);
+  overflow: hidden;
+  overflow-y: visible;
+}
+
+.modal-footer {
+  max-height: 10vh;
+  padding: 1%;
+}

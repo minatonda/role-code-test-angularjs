@@ -1,0 +1,41 @@
+.menu-modules {
+
+}
+
+.menu-modules ul.nav-pills {
+}
+
+.menu-modules ul.nav-pills > li > ul.nav-pills {
+    display: none;
+}
+
+.menu-modules .nav-pills > li {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.menu-modules .nav-pills > li > a {
+    background-color: transparent;
+    border-radius: 0px;
+    color: black;
+}
+
+.menu-modules .nav-pills > li > a > i {
+    margin-right: 2%;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+.menu-modules .nav-pills > li:hover {
+    border-bottom: 1px solid rgb(66, 139, 202);
+    background-color: rgb(66, 139, 202);
+}
+
+.menu-modules .nav-pills > li:hover > a {
+    color: white;
+}
+
+ul.nav-pills > li:hover > ul.nav-pills {
+    display: block;
+}

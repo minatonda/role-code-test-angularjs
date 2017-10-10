@@ -1,0 +1,43 @@
+<div class="layout-right-content">
+    <div class="row user-background background-space-view">
+        <div class="col-xs-12" style="text-align:center;margin-top: 25px;margin-bottom: 25px;">
+            <img src="assets/images/user-default.png" alt="CEBRACE" class="img-circle">
+        </div>
+    </div>
+    <div class="row user-data" style="height: {{vm.userDataHeight()}}px;">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12">
+                    <hr style="margin-top:0;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="padding-horizonta-3perCent">
+                        <div class="row row-eq-height">
+                            <div class="col-xs-12 col-sm-12 vcenter">
+                              <span>
+                                  Welcome  {{vm.credential.username}} !
+                              </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <button class="btn btn-cebrace-mixed btn-now-wrap" ng-click="vm.logOut()">
+                                    <i class="fa fa-sign-out">
+                                    </i>
+                                    <span>Log Out</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+ul[uib-datepicker-popup-wrap] {
+    padding: 2%;
+}
+
+ul[uib-datepicker-popup-wrap] > li > div:first-child {
+    overflow: hidden;
+    overflow-x: auto;
+}

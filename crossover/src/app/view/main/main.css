@@ -1,0 +1,39 @@
+div.icon-menu {
+    display: inline-block;
+    text-align: center;
+    margin: 3%;
+    padding: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.1s;
+    color: #333;
+}
+
+div.icon-menu * {
+    transition: all 0.2s;
+}
+
+div.icon-menu i {
+    font-size: 4vw;
+    display: block;
+}
+
+div.icon-menu span {
+    font-size: 2vw;
+    display: block;
+}
+
+div.icon-menu:hover {
+    /* border: 1px solid #7D7DDC; */
+    /* background-color: rgba(24, 98, 208, 0.45); */
+    color: #FA6938;
+    transform: scale(1.2, 1.2);
+}
+
+div.icon-menu:hover i {
+
+}
+
+div.icon-menu:hover span {
+
+}
