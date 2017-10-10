@@ -1,0 +1,56 @@
+.p-padding-0 {}
+
+.p-padding-left-0 {
+    padding-left: 0 !important;
+}
+
+.p-padding-top-0 {
+    padding-left: 0 !important;
+}
+
+.p-padding-right-0 {
+    padding-left: 0 !important;
+}
+
+.p-padding-bottom-0 {
+    padding-left: 0 !important;
+}
+
+.p-text-align-right {
+    text-align: right !important;
+}
+
+.p-display-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.p-display-flex-align-center {
+    align-items: center;
+}
+
+.p-display-flex-justify-center {
+    justify-content: center;
+}
+
+.p-display-flex-justify-flex-start {
+    justify-content: flex-start;
+}
+
+.p-display-flex-justify-flex-end {
+    justify-content: flex-end;
+}
+
+.p-height-90 {
+    height: 90%;
+}
+
+.p-padding-vertical-10 {
+    padding: 10px;
+}
+
+.p-background-color-white {
+    background-color: white;
+}

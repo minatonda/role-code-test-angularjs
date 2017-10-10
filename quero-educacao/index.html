@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <section-css>
+            <link rel="stylesheet" type="text/css" href="assets/style/reset.css">
+            <link rel="stylesheet" type="text/css" href="assets/style/properties.css">
+            <link rel="stylesheet" type="text/css" href="assets/style/utilities.css">
+        <link rel="stylesheet" type="text/css" href="assets/style/grid.css">
+        <link rel="stylesheet" type="text/css" href="assets/style/theme.css">
+    </section-css>
+</head>
+
+<body>
+    <div class="grid-container notebook">
+        <div class="row row-eq-height panel-root">
+            <div class="panel-left">
+                <div class="row row-eq-height row-va-middle notebook-header">
+                    <div class="col-1">
+                        <button onclick="applicationInterface.showTaskEditor()">Add Task</button>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-1 p-text-align-right">
+                        <button class="btn-img img-cog"></button>
+                    </div>
+                </div>
+                <div class="row notebook-content">
+                    <line-shadow></line-shadow>
+                    <div class="col-6 notebook js-task-list">
+                    </div>
+                </div>
+            </div>
+            <div class="panel-right">
+                <div class="row row-eq-height row-va-middle notebook-header">
+                    <div class="col-1">
+
+                    </div>
+                    <div class="col-4 p-display-flex p-display-flex-align-center p-display-flex-justify-flex-start">
+                        <span>Due Date</span>
+                        <button class="btn-img btn-lg img-heart"></button>
+                        <button class="btn-img btn-lg img-file-tree"></button>
+                        <button class="btn-img btn-lg img-clip"></button>
+                        <button class="btn-img btn-lg img-ellipsis"></button>
+                    </div>
+                    <div class="col-1 p-display-flex p-display-flex-align-center p-display-flex-justify-flex-end">
+                        <button class="btn-img  img-remove" onclick="applicationInterface.saveTask()"></button>
+                    </div>
+                </div>
+                <div class="row notebook-content notebook-content-has-botton">
+                    <line-shadow></line-shadow>
+                    <div class="col-6 js-task-form">
+
+                    </div>
+                </div>
+                <div class="row notebook-bottom row-eq-height p-display-flex-align-center">
+                    <div class="col-1"></div>
+                    <div class="col-5">
+                        <div class="row input-container u-border-rounded p-height-90 p-padding-vertical-10 p-background-color-white">
+                            <div class="col-6">
+                                <textarea name="task_description" placeholder="Write a comment..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<section-js>
+    <script src="script/application-utils.js"></script>
+    <script src="script/application-interface-horizontal-container.js"></script>
+    <script src="script/application-interface.js"></script>
+    <script src="script/application-interface-task-list.js"></script>
+    <script src="script/application-interface-task-editor.js"></script>
+    <script src="script/main.js"></script>
+</section-js>
+
+</html>

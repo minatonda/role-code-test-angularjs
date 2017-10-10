@@ -1,0 +1,189 @@
+html {
+    background-image: url('./../image/mac-bg.jpg');
+}
+
+html * {
+    font-family: sans-serif;
+}
+
+.panel-root {
+    height: 100%;
+    padding: 15px 0px;
+}
+
+.panel-left {
+    min-height: 100%;
+}
+
+.panel-right {
+    min-height: 100%;
+}
+
+line-shadow {
+    box-shadow: 0 1px 3px 1px rgba(128, 128, 128, 0.18);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 0px;
+}
+
+.notebook {}
+
+.notebook .notebook-header {
+    border: 1px solid #e0e6e8;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 10px 16px;
+    background-color: white;
+    height: 50px;
+}
+
+.notebook .notebook-content {
+    border: 1px solid #e0e6e8;
+    border-top: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 6px 16px;
+    height: calc(100% - 53px);
+    background-color: white;
+}
+
+.notebook .notebook-bottom {
+    height: 30%;
+    background-color: white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: #f6f8f9;
+}
+
+.notebook-content.notebook-content-has-botton {
+    height: calc(70% - 53px);
+    border-radius: 0px;
+}
+
+.notebook button.btn-img {
+    border: none;
+    background-size: 349px;
+    background-position: 0px -8px;
+    background-image: url(../image/ios-icones.png);
+    padding: 12px;
+}
+
+.notebook button.btn-img:hover {
+    background-image: url(../image/ios-icones-hover.png);
+}
+
+.notebook button.btn-img.img-remove {
+    background-position: -562px -8px;
+}
+
+.notebook button.btn-img.img-check {
+    background-position: -532px -8px;
+}
+
+.notebook button.btn-img.img-cog {
+    background-position: -1px -6px;
+}
+
+.notebook button.btn-img.img-heart {
+    background-position: -69px -9px;
+}
+
+.notebook button.btn-img.img-file-tree {
+    background-position: -104px -9px;
+}
+
+.notebook button.btn-img.img-clip {
+    background-position: -34px -9px;
+}
+
+.notebook button.btn-img.img-ellipsis {
+    background-position: -140px -10px;
+}
+
+.notebook button.btn-img.img-circle {
+    background-position: 0px -8px;
+}
+
+.notebook button.btn-img.btn-lg {
+    background-size: 536px;
+    background-position: 0px -8px;
+    padding: 16px 16px;
+    margin: 0px 4px;
+}
+
+.notebook button.btn-img.btn-lg.img-check {
+    background-position: -283px -15px;
+}
+
+.notebook button.btn-img.btn-lg.img-cog {
+    background-position: 0px -8px;
+}
+
+.notebook button.btn-img.btn-lg.img-heart {
+    background-position: -93px -13px;
+}
+
+.notebook button.btn-img.btn-lg.img-file-tree {
+    background-position: -138px -13px;
+}
+
+.notebook button.btn-img.btn-lg.img-clip {
+    background-position: -48px -13px;
+}
+
+.notebook button.btn-img.btn-lg.img-ellipsis {
+    background-position: -185px -14px;
+}
+
+.notebook button.btn-img.btn-lg.img-circle {
+    background-position: 0px -8px;
+}
+
+.notebook button {
+    background: transparent;
+    color: #14aaf5;
+    border: 1px solid #14aaf5;
+    border-radius: 3px;
+    font-weight: 600;
+    padding: 7px 8px;
+}
+
+.notebook .notebook-row {
+    border-bottom: 1px solid #e0e6e8;
+}
+
+.notebook .notebook-row:hover{
+    background-color: rgba(20, 170, 245, 0.12);
+}
+
+.notebook .input-container {
+    border: 1px solid transparent;
+}
+
+.notebook .input-container:hover {
+    border: 1px solid #e0e6e8;
+}
+
+.notebook .input-container textarea {
+    resize: none;
+    border: none;
+    width: 100%;
+}
+
+.notebook .input-container.input-lg {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 4px 10px;
+}
+
+.notebook .input-container.input-lg input {
+    font-size: 25px;
+    border: none;
+    width: 100%;
+}
+
+
+
