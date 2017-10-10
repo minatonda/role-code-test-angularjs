@@ -1,0 +1,14 @@
+<div class="botao-menu" ng-show="possuiEntradasParaExibir()" uib-dropdown is-open="menuAberto">
+    <button type="button" class="btn btn-default btn-full-width {{obterClasse()}}" ng-if="possuiEntradasParaExibir()" uib-dropdown-toggle>
+        <i class="fa fa-bars"></i>
+    </button>
+    <ul class="dropdown-menu" ng-if="possuiEntradasParaExibir()" ng-class="{'dropdown-canto-direito':eListaCantoDireito()}" uib-dropdown-menu>
+        <li ng-repeat="entrada in obterEntradasExibicao()">
+            <a class="text-left text-ellipsis" ng-click="dispararEntradaFuncao(entrada)">
+                <i style="margin-right: 4px;"
+                   class="fa {{obterEntradaIcone(entrada)}}"></i>
+                <span>{{obterEntradaTitulo(entrada)}}</span>
+            </a>
+        </li>
+    </ul>
+</div>

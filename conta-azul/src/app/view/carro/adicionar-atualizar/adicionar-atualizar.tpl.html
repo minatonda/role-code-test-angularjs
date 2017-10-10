@@ -1,0 +1,55 @@
+<div class="container-fluid" id="vm.modelo-adicionar-atualizar">
+    <div class="row">
+        <div class="col-xs-12">
+            <legend>{{vm.obterTitulo()}}</legend>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-3 form-group">
+            <label class="control-label">Marca</label>
+            <input class="form-control" placeholder="Marca" ng-model="vm.modelo.marca">
+        </div>
+        <div class="col-xs-12 col-md-3 form-group">
+            <label class="control-label">Modelo</label>
+            <input class="form-control" placeholder="Modelo" ng-model="vm.modelo.modelo">
+        </div>
+        <div class="col-xs-12 col-md-3 form-group">
+            <label class="control-label">Placa</label>
+            <input class="form-control" placeholder="Placa" ng-model="vm.modelo.placa">
+        </div>
+        <div class="col-xs-12 col-md-3 form-group">
+            <label class="control-label">Valor</label>
+            <div class="input-group">
+                <span class="input-group-addon">R$</span>
+                <input class="form-control" placeholder="Valor" ng-model="vm.modelo.valor" ui-money-mask>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-3 form-group">
+            <label class="control-label">Imagem</label>
+            <input class="form-control" placeholder="Imagem" ng-model="vm.modelo.imagem">
+        </div>
+        <div class="col-xs-12 col-md-3 form-group">
+            <label class="control-label">Combustível</label>
+            <ui-select ng-model="vm.modelo.combustivel"
+                       theme="bootstrap"
+                       on-select="aoSelecionar(valor)">
+                <ui-select-match placeholder="Combustível">
+                    {{$select.selected.nome}}
+                </ui-select-match>
+                <ui-select-choices repeat="valor.nome as valor in vm.obterCombustiveis() | filter: $select.search">
+                    <span ng-bind-html="valor.nome | highlight: $select.search"></span>
+                </ui-select-choices>
+            </ui-select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="button-panel">
+                <button class="btn btn-default btn-form-control" ng-click="vm.salvar(vm.modelo)">
+                    <i class="fa fa-save"></i>
+                    <span>Salvar</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

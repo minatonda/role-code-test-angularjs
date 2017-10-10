@@ -1,0 +1,17 @@
+.panel-menu {
+    border: 1px solid #2687e9;
+}
+
+.panel-menu .panel-heading {
+    background-color: #2687e9;
+    color: white;
+}
+
+.panel-menu ul li {
+    cursor: pointer;
+    color: #728598;
+}
+
+.panel-menu ul li:hover {
+    background-color: #e3ecf3;
+}
