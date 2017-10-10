@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    background-image: url('../images/background.jpg');
+    background-attachment: fixed;
+    background-size: 65% 90%;
+    background-position: 55% 30%;
+    background-repeat: no-repeat;
+    overflow-y: auto;
+}
+
+div[ui-view]{
+    background-color: rgba(255, 255, 255, 0.92);
+}
+
+div[ui-view] > .row{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+/*NavBar*/
+
+.navbar.acme {
+    background-color: #3C465A;
+    border-color: #505D77;
+}
+
+.navbar.acme .navbar-brand{
+    color:white;
+}
+
+.navbar.acme .navbar-nav > li > a {
+    color: #337AB7;
+}
+
+.navbar.acme .navbar-nav > .active > a, .navbar.acme .navbar-nav > .active > a:hover, .navbar.acme .navbar-nav > .active > a:focus {
+    color: #337AB7;
+    background-color: white;
+}
+
+#visualmenu {
+    /* padding: 10%; */
+}
+
+#visualmenu .entry {
+    position: relative;
+    color: #3C465A;
+    padding: 2%;
+    text-decoration: none;
+    /* border: 1px solid #DED9D9; */
+    /* background-color: rgba(222, 217, 217, 0.06); */
+    transition: all 0.2s;
+    cursor: pointer;
+    margin: 2%;
+    margin-bottom: 4%;
+    margin-top: 4%;
+}
+
+#visualmenu .entry:hover, #visualmenu .entry:hover .entry-title {
+    /* background-color: rgba(58, 84, 140, 0.47); */
+    transform: scale(1.2);
+    color: #FA6938;
+}
+
+#visualmenu .entry-title {
+    font-size: 15px;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-family: sans-serif;
+    display: block;
+    margin-top: 10px;
+    color: rgba(58, 57, 57, 0.82);
+}
+
+#visualmenu .entry .operation {
+    font-size: 90px;
+    color: #43B741;
+    position: absolute;
+    top: 87px;
+}

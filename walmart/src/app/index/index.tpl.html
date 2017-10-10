@@ -1,0 +1,49 @@
+<div class="col-xs-12">
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="visualmenu" style="text-align:center;">
+                <a ui-sref="usuario.lista" class="entry fa fa-users">
+                    <label class="entry-title">
+                        Usuários
+                    </label>
+                </a>
+                <a ui-sref="pedido.lista" class="entry fa fa-shopping-cart">
+                    <label class="entry-title">
+                        Pedidos
+                    </label>
+                </a>
+                <a ui-sref="pedido.lista.endereco" class="entry fa fa-map">
+                    <label class="entry-title">
+                        Endereços de Pedidos
+                    </label>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>
+<script>
+
+    $(window).on('resize', function () {
+        calculemenusize();
+    });
+
+    function calculemenusize() {
+        var windowheight = $(window).outerHeight();
+        var windowwidth = $(window).outerWidth();
+        square = windowheight > windowwidth ? windowwidth : windowheight;
+        $('#visualmenu .entry').css('font-size', square / 5);
+
+        var _squareheight = 0;
+        var _squarewidth = 0;
+        $('#visualmenu .entry').css('height', 'auto');
+        $('#visualmenu .entry').css('width', 'auto');
+        $('#visualmenu .entry').each(function (i, item) {
+            _squareheight = _squareheight < $(item).outerHeight() ? $(item).outerHeight() : _squareheight;
+            _squarewidth = _squarewidth < $(item).outerWidth() ? $(item).outerWidth() : _squarewidth;
+        });
+        //$('#visualmenu .entry').css('width', _squarewidth);
+    }
+    calculemenusize();
+
+</script>

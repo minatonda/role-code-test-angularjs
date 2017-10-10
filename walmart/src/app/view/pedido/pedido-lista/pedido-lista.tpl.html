@@ -1,0 +1,117 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <uib-pagination ng-model="controller.paginacao.currentPage" total-items="controller.source.pedidos.length"
+                                items-per-page="controller.paginacao.itemsPerPage"
+                                boundary-links="true" first-text="Início" last-text="Fim" previous-text="Anterior" ng-disabled="controller.paginacao.filtro"
+                                next-text="Próximo" max-size="controller.paginacao.maxSize">
+                </uib-pagination>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="input-group panel-table-search">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input type="text" class="form-control" ng-model="controller.paginacao.filtro" placeholder="Filtro">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-default panel-table">
+                <div class="panel-heading">
+                    <div class="row row-eq-height align-center">
+                        <div class="col-xs-12 col-md-2">
+                            <label>Opções</label>
+                        </div>
+                        <div class="col-xs-12 col-md-1">
+                            <label>ID</label>
+                        </div>
+                        <div class="col-xs-12 col-md-3">
+                            <label>Cliente</label>
+                        </div>
+                        <div class="col-xs-12 col-md-2">
+                            <label>Bairro</label>
+                        </div>
+                        <div class="col-xs-12 col-md-2">
+                            <label>Cidade</label>
+                        </div>
+                        <div class="col-xs-12 col-md-2">
+                            <label>Estado</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row" ng-repeat="pedido in controller.paginacao.paginado | filter : controller.paginacao.filtro">
+                        <div class="col-xs-12">
+                            <div class="row row-eq-height align-center">
+                                <div class="col-xs-12 col-md-2">
+                                    <button class="btn btn-primary" ng-click="controller.command.PedidoDetalhes(usuario)">
+                                        <span class="fa fa-search"></span>
+                                    </button>
+                                    <button class="btn btn-primary" ng-click="pedido.collapse = !pedido.collapse">
+                                        <span class="fa fa-expand"></span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-12 col-md-1">
+                                    {{pedido.ID}}
+                                </div>
+                                <div class="col-xs-12 col-md-3">
+                                    {{pedido.Usuario.Nome}}
+                                </div>
+                                <div class="col-xs-12 col-md-2">
+                                    {{pedido.Endereco.Bairro}}
+                                </div>
+                                <div class="col-xs-12 col-md-2">
+                                    {{pedido.Endereco.Cidade}}
+                                </div>
+                                <div class="col-xs-12 col-md-2">
+                                    {{pedido.Endereco.Estado}}
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 10px;margin-bottom: 10px;" uib-collapse="!pedido.collapse">
+                                <div class="col-xs-12">
+                                    <div class="panel panel-default panel-table">
+                                        <div class="panel-heading">
+                                            <div class="row row-eq-height align-center">
+                                                <div class="col-xs-12 col-md-3">
+                                                    <label>Imagem</label>
+                                                </div>
+                                                <div class="col-xs-12 col-md-3">
+                                                    <label>Nome</label>
+                                                </div>
+                                                <div class="col-xs-12 col-md-3">
+                                                    <label>Descrição</label>
+                                                </div>
+                                                <div class="col-xs-12 col-md-3">
+                                                    <label>Quantidade</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row" ng-repeat="item in pedido.Itens">
+                                                <div class="col-xs-12">
+                                                    <div class="row row-eq-height align-center">
+                                                        <div class="col-xs-12 col-md-3">
+                                                            <img src="{{item.Produto.ImagemSRC}}" class="" alt="Cinque Terre" style="width: 150px;max-height: 150px;">
+                                                        </div>
+                                                        <div class="col-xs-12 col-md-3">
+                                                            {{item.Produto.Nome}}
+                                                        </div>
+                                                        <div class="col-xs-12 col-md-3">
+                                                            {{item.Produto.Descricao}}
+                                                        </div>
+                                                        <div class="col-xs-12 col-md-3">
+                                                            {{item.Quantidade}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,82 @@
+<div class="row">
+    <div class="col-xs-12 col-md-8">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <uib-pagination ng-model="controller.paginacao.currentPage" total-items="controller.source.pedidos.length"
+                                items-per-page="controller.paginacao.itemsPerPage"
+                                boundary-links="true" first-text="Início" last-text="Fim" previous-text="Anterior" ng-disabled="controller.paginacao.filtro"
+                                next-text="Próximo" max-size="controller.paginacao.maxSize">
+                </uib-pagination>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="input-group panel-table-search">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input type="text" class="form-control" ng-model="controller.paginacao.filtro" placeholder="Filtro">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-default panel-table">
+                <div class="panel-heading">
+                    <div class="row row-eq-height align-center">
+                        <div class="col-xs-12 col-md-1">
+                           <label>Opções</label>
+                        </div>
+                        <div class="col-xs-12 col-md-1">
+                            <label>ID</label>
+                        </div>
+                        <div class="col-xs-12 col-md-2">
+                            <label>CEP</label>
+                        </div>
+                        <div class="col-xs-12 col-md-2">
+                            <label>Rua</label>
+                        </div>
+                        <div class="col-xs-12 col-md-2">
+                            <label>Bairro</label>
+                        </div>
+                        <div class="col-xs-12 col-md-2">
+                            <label>Cidade</label>
+                        </div>
+                        <div class="col-xs-12 col-md-2">
+                            <label>Estado</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row" ng-repeat="pedido in controller.paginacao.paginado | filter : controller.paginacao.filtro">
+                        <div class="col-xs-12">
+                            <div class="row row-eq-height align-center">
+                                <div class="col-xs-12 col-md-1">
+                                    <button class="btn btn-primary" ng-click="controller.command.CentralizeMap(pedido)">
+                                        <i class="fa fa-map-marker"></i>
+                                    </button>
+                                </div>
+                                <div class="col-xs-12 col-md-1">
+                                    {{pedido.ID}}
+                                </div>
+                                <div class="col-xs-12 col-md-2">
+                                    {{pedido.Endereco.CEP}}
+                                </div>
+                                <div class="col-xs-12 col-md-2">
+                                    {{pedido.Endereco.Rua}}
+                                </div>
+                                <div class="col-xs-12 col-md-2">
+                                    {{pedido.Endereco.Bairro}}
+                                </div>
+                                <div class="col-xs-12 col-md-2">
+                                    {{pedido.Endereco.Cidade}}
+                                </div>
+                                <div class="col-xs-12 col-md-2">
+                                    {{pedido.Endereco.Estado}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+        <leaflet markers="controller.markers" center="controller.osloCenter" style="height: 500px;"></leaflet>
+    </div>
+</div>

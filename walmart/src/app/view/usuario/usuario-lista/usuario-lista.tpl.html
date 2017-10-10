@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <uib-pagination ng-model="controller.paginacao.currentPage" total-items="controller.source.usuarios.length"
+                                items-per-page="controller.paginacao.itemsPerPage"
+                                boundary-links="true" first-text="Início" last-text="Fim" previous-text="Anterior" ng-disabled="controller.paginacao.filtro"
+                                next-text="Próximo" max-size="controller.paginacao.maxSize">
+                </uib-pagination>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="input-group panel-table-search">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input type="text" class="form-control" ng-model="controller.paginacao.filtro" placeholder="Filtro">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-default panel-table">
+                <div class="panel-heading">
+                    <div class="row row-eq-height align-center">
+                        <div class="col-xs-12 col-md-2">
+                            <label>Opções</label>
+                        </div>
+                        <div class="col-xs-12 col-md-2">
+                            <label>ID</label>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <label>Nome</label>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <label>Cidade</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row row-eq-height align-center" ng-repeat="usuario in controller.paginacao.paginado | filter : controller.paginacao.filtro">
+                        <div class="col-xs-12 col-md-2">
+                            <button class="btn btn-primary" ng-click="controller.command.UsuarioDetalhes(usuario)">
+                                <span class="fa fa-search"></span>
+                            </button>
+                        </div>
+                        <div class="col-xs-12 col-md-2">
+                            {{usuario.ID}}
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            {{usuario.Nome.toUpperCase()}}
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            {{usuario.Endereco.Cidade.toUpperCase()}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
