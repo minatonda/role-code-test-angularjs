@@ -1,0 +1,20 @@
+<div class="row dctv-filtro-paginacao">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12 col-md-{{obterGridSpan()}} form-group" ng-repeat="combo in obterCombos()">
+                <label class="fonte-tamanho-padrao">{{combo.titulo}}</label>
+                <ui-select ng-model="combo.valor"
+                           theme="bootstrap"
+                           on-select="obterAoSelecionar(combo)(combo.valor);">
+                    <ui-select-match placeholder="{{combo.titulo}}">
+                        {{obterComboExibicaoValor(combo,$select.selected)}}
+                    </ui-select-match>
+                    <ui-select-choices
+                            repeat="valor in obterComboValores(combo) | filter: $select.search">
+                        <span ng-bind-html="obterComboExibicaoValor(combo,valor)| highlight: $select.search"></span>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+    </div>
+</div>

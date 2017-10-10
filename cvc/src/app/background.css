@@ -1,0 +1,14 @@
+.background-space-view {
+    background-image: url('../assets/images/space-view.png');
+}
+.background-cebrace-small {
+    background-image: url('../assets/images/logo-cebrace-small.png');
+}
+
+.background-logo-cebrace-big {
+  background-image: url('../assets/images/logo-cebrace-big.jpg');
+}
+
+.background-user-default {
+    background-image: url('../assets/images/user-default.png');
+}

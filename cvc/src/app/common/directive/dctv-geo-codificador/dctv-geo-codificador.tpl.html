@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-12">
+        <ui-select ng-model="crud.Endereco"
+                   theme="bootstrap"
+                   reset-search-input="false"
+                   on-select="command.EnderecoSelecionado(crud.Endereco)"
+                   style="width: 100%"
+                   title="Geo Localizador">
+            <ui-select-match placeholder="Digite um Endereço">{{$select.selected.formatted_address}}</ui-select-match>
+            <ui-select-choices repeat="endereco in source.enderecos track by $index"
+                               refresh="command.BuscarEnderecos($select.search)"
+                               refresh-delay="0">
+                <div ng-bind-html="endereco.formatted_address | highlight: $select.search"></div>
+            </ui-select-choices>
+        </ui-select>
+    </div>
+</div>

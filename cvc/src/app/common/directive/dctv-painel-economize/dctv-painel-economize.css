@@ -1,0 +1,19 @@
+.dctv-painel-economize {
+
+}
+
+.dctv-painel-economize .panel {
+    border: 1px solid #69b42e;
+    border-radius: 0px;
+}
+
+.dctv-painel-economize .panel .panel-heading {
+    background-color: #69b42e;
+    color: white;
+    padding: 2px 6px;
+    font-size: 11px;
+}
+
+.dctv-painel-economize .panel .panel-body {
+    padding: 2px 15px;
+}

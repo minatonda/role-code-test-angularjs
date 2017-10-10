@@ -1,0 +1,24 @@
+<div class="row dctv-filtro-paginacao">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12 col-md-{{obterGridSpan()}} form-group" ng-if="obterFiltros().length==0;">
+                <label class="fonte-tamanho-padrao">Filtro</label>
+                <input class="form-control" ng-model="textoFiltro" ng-change="processarListaTexto(textoFiltro);">
+            </div>
+            <div class="col-xs-12 col-md-{{obterGridSpan()}} form-group" ng-repeat="filtro in obterFiltros()">
+                <label class="fonte-tamanho-padrao">{{filtro.titulo}}</label>
+                <ui-select ng-model="filtro.valor"
+                           theme="bootstrap"
+                           on-select="processarListaFiltros(filtro);">
+                    <ui-select-match placeholder="{{filtro.titulo}}">
+                        {{$select.selected}}
+                    </ui-select-match>
+                    <ui-select-choices
+                            repeat="valor in obterValoresFiltro(filtro) | filter: $select.search">
+                        <span ng-bind-html="valor| highlight: $select.search"></span>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+    </div>
+</div>

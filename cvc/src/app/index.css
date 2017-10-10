@@ -1,0 +1,50 @@
+:root {
+    --cor-padrao: #516eb0;
+    --tamanho-padrao: 10px;
+}
+
+#layout-head {
+    height: 20px;
+}
+
+#layout-middle {
+    width: 100%;
+}
+
+.fonte-cor-padrao {
+    color: #163379;
+}
+
+.fonte-tamanho-padrao {
+    font-size: 10px;
+}
+
+.vcenter {
+    bottom: 0;
+    top: 0;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.vleft {
+    bottom: 0;
+    top: 0;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: start;
+}
+
+.vright {
+    bottom: 0;
+    top: 0;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: end;
+}

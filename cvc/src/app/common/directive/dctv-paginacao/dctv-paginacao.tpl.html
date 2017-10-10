@@ -1,0 +1,47 @@
+<div class="row dctv-filtro-paginacao">
+    <div class="col-xs-12">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-{{obterGridSpan()}} form-group paginacao">
+                <label class="fonte-tamanho-padrao">Paginação</label>
+                <div class="input-group">
+					<span class="input-group-btn">
+						<button class="btn btn-default" ng-click="retrocederPaginacao()">
+							<i class="fa fa-minus"></i>
+						</button>
+					</span>
+                    <input id="pagina-atual-{{obterIdEscopo()}}" type="text" class="form-control" ng-model="paginaAtual"
+                           ng-change="aoAlterarPaginaAtual(paginaAtual)">
+                    <span class="input-group-addon">/ {{obterNumeroTotalPaginas()}}</span>
+                    <span class="input-group-btn">
+						<button class="btn btn-default" ng-click="avancarPaginacao()">
+							<i class="fa fa-plus"></i>
+						</button>
+					</span>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-{{obterGridSpan()}} form-group">
+                <label class="fonte-tamanho-padrao">Itens por Página</label>
+                <div class="input-group">
+					<span class="input-group-btn">
+						<button class="btn btn-default" ng-click="diminuirItensPorPagina()">
+							<i class="fa fa-minus"></i>
+						</button>
+					</span>
+                    <input type="text" class="form-control" ng-model="itensPorPagina" ng-change="aoAlterarItensPorPagina(itensPorPagina)">
+                    <span class="input-group-btn">
+						<button class="btn btn-default" ng-click="aumentarItensPorPagina()">
+							<i class="fa fa-plus"></i>
+						</button>
+					</span>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-{{obterGridSpan()}} form-group">
+                <label class="fonte-tamanho-padrao">Total de Itens</label>
+                <div class="form-control" disabled="true">{{obterTotalItens()}} Registro(s) encontrado(s)</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12"></div>
+</div>

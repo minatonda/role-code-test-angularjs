@@ -1,0 +1,46 @@
+<div class="row dctv-motor-busca-carro">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12 form-group">
+                <label class="fonte-tamanho-padrao">LOCAL DE RETIRADA</label>
+                <dctv-geo-codificador></dctv-geo-codificador>
+            </div>
+        </div>
+        <div class="row row-eq-height">
+            <div class="col-xs-12 vleft">
+                <checkbox class="btn btn-xs btn-primary btn-checkbox" ng-model="devolverEmOutroLocal"></checkbox>
+                <span class="fonte-cor-padrao fonte-tamanho-padrao" style="margin-left: 5px;">DEVOLVER O CARRO EM OUTRO LOCAL</span>
+            </div>
+        </div>
+        <div class="row" ng-if="devolverEmOutroLocal">
+            <div class="col-xs-12 form-group">
+                <label class="fonte-tamanho-padrao">LOCAL DE DEVOLUÇÃO</label>
+                <dctv-geo-codificador></dctv-geo-codificador>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 form-group">
+                <label class="fonte-tamanho-padrao">RETIRADA</label>
+                <dctv-input-data></dctv-input-data>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 form-group">
+                <label class="fonte-tamanho-padrao">DEVOLUÇÃO - 8 DIAS(S)</label>
+                <dctv-input-data></dctv-input-data>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <dctv-painel-economize></dctv-painel-economize>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 form-group">
+                <button class="btn btn-lg btn-full-width btn-custom-1" style="border-bottom: 4px solid #172033;" ng-click="buscar()">
+                    <span>Buscar</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

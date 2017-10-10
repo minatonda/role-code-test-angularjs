@@ -1,0 +1,89 @@
+<div class="row row-eq-height no-xs dctv-anuncio-carro">
+    <div class="col-xs-12 col-sm-9 informacoes">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                            <div class="desconto" ng-if="obterDesconto()">
+                                <span class="desconto-letreiro">Desconto de</span>
+                                <span class="desconto-valor">{{obterDesconto()}}%</span>
+                            </div>
+                            <img src="{{obterImagem()}}" style="width: 100%;margin-top: 45px;">
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-8">
+                            <div class="row row-eq-height">
+                                <div class="col-xs-8 vleft">
+                                    <h2 class="fonte-cor-padrao">{{obterTituloAnuncio()}}</h2>
+                                </div>
+                                <div class="col-xs-4 vright">
+                                    <i class="fa fa-heart-o favorito"></i>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <span class="codigo-taxa"> Código da Taxa : {{obterCodigoTaxa()}}</span>
+                                    <h3>{{obterDescricaoAnuncio()}}</h3>
+                                    <ul>
+                                        <li ng-repeat="caracteristica in obterCaracteristicas()">- {{caracteristica}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-xs-12 vright">
+                                    <button class="btn btn-xs btn-custom-1" ng-click="alternarDetalhes()">
+                                        <span>Ver detalhes</span>
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <hr style="margin: 0px;"/>
+            </div>
+            <div class="row" uib-collapse="eDetalhesVisivel()">
+                <div class="col-xs-12">
+                    {{obterDetalhes()}}
+                </div>
+            </div>
+            <div class="row">
+                <hr style="margin: 0px;"/>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4 caracteristicas vleft" ng-repeat="caracteristica in obterCaracteristicasFisicas()">
+                            <span class="imagem {{obterIconeCaracteristicaFisica(caracteristica)}}"></span>
+                            <span class="vleft">{{obterValorCaracteristica(caracteristica)}} {{obterTituloCaracteristica(caracteristica)}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 precos">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12" style="padding-top: 14px;">
+                    <span class="letreiro-total-locacao">Total da Locação</span>
+                    <span class="letreiro-desconto" ng-if="obterDesconto()">
+                        De {{obterPreco()}}
+                        <div></div>
+                    </span>
+                    <span class="letreiro-preco">
+                        <span>por </span>
+                        <span class="letreiro-valor-preco fonte-cor-padrao">{{obterDesconto()?obterPrecoDesconto():obterPreco()}}</span>
+                    </span>
+                    <span class="letreiro-parcelas fonte-cor-padrao">em Até {{obterNumeroParcelas()}}</span>
+                    <span>
+                        <button class="btn btn-lg btn-full-width btn-custom-2" style="border-bottom: 4px solid #1d3261;">Alugar</button>
+                    </span>
+                    <span class="letreiro-taxas-inclusas"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

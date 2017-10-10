@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <dctv-motor-busca-carro ao-retornar-busca="vm.aoRetornarBusca"></dctv-motor-busca-carro>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-9">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <dctv-paginacao lista="vm.obterListaOrdenada()" ao-processar-lista="vm.aoPaginarLista"></dctv-paginacao>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <dctv-filtro filtros="vm.obterFiltros()" ordenacoes="vm.obterOrdenacoes()" lista="vm.obterLista()" ao-processar-lista="vm.aoFiltrarLista" span-controladores="12"></dctv-filtro>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <dctv-ordenador ordenacoes="vm.obterOrdenacoes()" lista="vm.obterListaFiltrada()" ao-processar-lista="vm.aoOrdenarLista" span-controladores="12"></dctv-ordenador>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <dctv-lista-combo combos="vm.obterCombos()"></dctv-lista-combo>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12" ng-repeat="anuncio in vm.obterListaPaginada();">
+                        <dctv-anuncio-carro fonte="anuncio" moeda="vm.obterMoeda()"></dctv-anuncio-carro>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
